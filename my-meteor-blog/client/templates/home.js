@@ -4,7 +4,7 @@ Template.home.created = function() {
 
 Template.home.rendered = function() {
     console.log('home is rendered');
-    this.$('p').html('We just replaced that text!');
+    //this.$('p').html('We just replaced that text!');
     
 }
 
