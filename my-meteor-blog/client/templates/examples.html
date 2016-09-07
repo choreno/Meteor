@@ -6,8 +6,17 @@
         {{someNested.text}}
     </p>
     <p>
-       {{logContext}}
+        {{logContext}}
     </p>
-
     <button>Get some random number</button>
+</template>
+<template name="blockHelperExample">
+    <div>
+        <h1>My block helper</h1>
+        {{#if this}}
+            <p>Content goes here: {{>Template.contentBlock}}</p>
+        {{else}}
+            <p>Else content here: {{>Template.elseBlock}}</p>
+        {{/if}}
+    </div>
 </template>

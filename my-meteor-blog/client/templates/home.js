@@ -23,5 +23,28 @@ Template.home.helpers({
             someNested: { text: 'That comes from "someNested.text"' }
         }
     }
+    ,
+    postsList: function(){   
+
+        return Posts.find({}, {sort: {timeCreated: -1}}); 
+        // return [
+        // {
+        //     title: 'My Second Entry',
+        //     description: 'Borem sodum ....',
+        //     author: 'FAbian Vogel',
+        //     timeCreated: moment().subtract(3, 'days').unix()
+        // },
+        // {
+        //     title: 'My Second Entry',
+        //     description: 'Borem sodum ....',
+        //     author: 'FAbian Vogel',
+        //     timeCreated: moment().subtract(3, 'days').unix()
+        // }
+        // ]
+    },
+    monthList: function(){
+        return ['Jan', 'Feb', 'Mar']; 
+    }
 
 });
+

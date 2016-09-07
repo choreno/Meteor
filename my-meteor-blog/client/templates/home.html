@@ -1,7 +1,26 @@
 <template name="home">
-    {{#markdown}} ##Welcome to my Blog Here I'm talking about my latest dicoveries from the world of JavaScript. {{/markdown}}
-	<!-- {{exampleHelper}} -->
-	<!-- {{> contextExample someText="I was set in the paranet template's helper, as an arugument"}} -->
-	{{> contextExample dataContextHelper}}
-	
+    <!-- {{#markdown}} ##Welcome to my Blog Here I'm talking about my latest dicoveries from the world of JavaScript. {{/markdown}}
+    {{exampleHelper}}
+    {{> contextExample someText="I was set in the paranet template's helper, as an arugument"}}
+    {{> contextExample dataContextHelper}}
+    
+    {{#blockHelperExample false}}
+        <span>Some Content</span>
+        {{else}}
+            <span>Some Warning</span>
+    {{/blockHelperExample}}
+ -->
+
+	{{#each postsList}}
+		{{>postInList}}
+	{{/each}}
+
+
+<!-- 	{{#each monthList}}
+		{{>calendarButtons}}
+	{{/each}}
+ -->
+
 </template>
+
+
